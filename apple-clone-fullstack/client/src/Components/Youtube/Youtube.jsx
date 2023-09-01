@@ -12,7 +12,7 @@ const Youtube = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=UCE_M8A5yxnLfW0KghEeajjw&part=snippet,id&order=date&maxResults=6`);
+      const response = await axios.get(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=UCE_M8A5yxnLfW0KghEeajjw&part=snippet,id&order=date&maxResults=8`);
       setVideos(response.data.items); // Extract the 'items' array and set it as the state.
     } catch (error) {
       console.error(error);
